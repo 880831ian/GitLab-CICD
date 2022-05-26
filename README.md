@@ -247,6 +247,12 @@ gitlab/gitlab-runner:alpine-v15.0.0
 
 <br>
 
+### GitLab CD
+
+GitLab CD 其實就是在 `.gitlab-ci.yml` 後面加上我們要部署的設定，透過 CI 整合完，我們可以設定他要部署到哪一台機器或是設備上這部分就放到下一篇文章直接用實作來告訴大家要怎麼使用吧！，請大家接續看下一篇 [部署 Laravel 於 Heroku 搭配 GitLab CI/CD](https://pin-yi.me/laravel-heroku-gitlab-cicd) ，一起學習吧 GoGo !
+
+<br>
+
 ## 參考資料
 
 [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
