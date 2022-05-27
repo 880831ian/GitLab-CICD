@@ -98,7 +98,7 @@ deploy-prod:
 <br>
 
 那我來簡單說明一下上面這些設定檔案的功能：
-* stages：代表這個 CI 設定檔有三個 stage 要跑，一個是 build、一個 test、一個 deploy，他們的順序也決定 CI 運作的順序，由 build > test > deploy，假如 test 沒有通過，就不會執行 deploy。
+* stages：代表這個 CI 設定檔有三個 stage 要跑，一個是 build、一個 test、一個 deploy，他們的順序也決定 CI 運作的順序，由 build → test → deploy，假如 test 沒有通過，就不會執行 deploy。
 * cache：我們在寫 CI 時，常常需要裝 package，但我不想每次都重新跑一次，所以可以寫一個 cache，不要讓 GitLab 每次都重新拉新的 package。
 * build-job、test-job1、test-job2、deploy-prod：代表我有 4 個 job 要執行，每個 job 裡面有不同的任務，也是顯示在 Pipeline 的名稱。
 * stage：他現在要執行的階段，對應到 stages。
@@ -223,7 +223,7 @@ GitLab Runner 的建議建置步驟如下：
 2. 接下來開始安裝 GitLab Runner，我們使用 Docker，以下是 Docker 執行的指令：本此使用 [gitlab-runner](https://hub.docker.com/layers/gitlab-runner/gitlab/gitlab-runner/alpine-v15.0.0/images/sha256-f44b39d92aa31186b4d6b986d1c3ffbf8ef4228c2e070410a7a417fb0aa159ce?context=explore) 版本是 alpine-v15.0.0
 
 ```sh
-docker run -d --name gitlab-runner --restart always \                      
+docker run -d --name gitlab-runner --restart always \    
 -v ~/Shared/gitlab-runner/config:/etc/gitlab-runner \
 -v /var/run/docker.sock:/var/run/docker.sock \
 gitlab/gitlab-runner:alpine-v15.0.0
